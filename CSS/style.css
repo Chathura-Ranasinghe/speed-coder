@@ -231,3 +231,8 @@ body{
       font-size: 36px;
     }
   }
+  @media (max-height: 500px) {
+    .download-btn-cn a{
+      display: none;
+    }
+  }
