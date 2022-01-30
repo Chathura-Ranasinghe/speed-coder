@@ -1,6 +1,6 @@
 # Speed-coder V.1
 
-Typing speed game**
+Typing speed game.
 ** Hey this is my first web application game i created. **
 ---
 ## Contributors
