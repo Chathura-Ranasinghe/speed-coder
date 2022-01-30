@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins','sans-serif';
+}
+body{
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0b0c10;
+}
+.head{
+    position: fixed;
+    top: 20px;
+    z-index: 99999;
+    color: #66fcf1;
+    font-size: 48px;
+    font-weight: bold;
+}
+::selection{
+    color: #fff;
+    background: #0b0c10;
+}
+.wrapper{
+    width: 770px;
+}
+.wrapper .input-field{
+    z-index: -999;
+    opacity: 0;
+    position:absolute;
+}
+.wrapper .content-box{
+    padding: 20px 20px 0;
+    border-radius: 10px;
+    background: #1f2833 ;
+}
+.content-box .paragraphs-text{
+    max-height: 256px;
+    overflow: auto;
+    padding: 5px;
+    border-radius: 10px;
+    background: #fff;
+    border:1px solid #1f2833;
+}
+.paragraphs-text::-webkit-scrollbar{
+    width: 0;
+}
+.paragraphs-text p{
+    font-size: 18px;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break: break-all;
+}
+.paragraphs-text p span{
+    position: relative;
+}
+.paragraphs-text p span.correct{
+    color: #56964f;
+}
+
+.paragraphs-text p span.incorrect{
+    color: #cb3439;
+    background: #ffc0cb;
+    outline: 1px solid #fff;
+    border-radius: 4px;
+}
+.paragraphs-text p span.active{
+    color: #45a29e;
+}
+.paragraphs-text p span.active::before{
+    content: "";
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    background: #45a29e;
+    animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink {
+    50%{
+        opacity: 1;
+    }
+}
+
+.content-box .nav{
+    display: flex;
+    margin-top: 17px;
+    padding: 12px 0px;
+    flex-wrap: wrap;
+    border-top: 1px solid #1f2833;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav .details{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: calc(100% - 140px);
+    justify-content: space-between;
+}
+.details li{
+    height: 22px;
+    display: flex;
+    list-style: none;
+    position: relative;
+    align-items: center;
+}
+.details li:not(:first-child){
+    padding-left: 22px;
+    border-left: 1px solid #1f2833;
+}
+.details li p{
+    font-size: 18px;
+    color: aliceblue;
+}
+.details li span{
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #66fcf1;
+}
+.details li:not(:first-child) span{
+    font-weight: 500;
+}
+.details li span b{
+    font-weight: 500;
+}
+.nav button{
+    border: none;
+    outline: none;
+    width: 105px;
+    padding: 8px 0;
+    color: #1f2833;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #66fcf1;
+    transition: transform 0.3s ease;
+}
+.nav button:active{
+    transform: scale(0.97);
+    background: #66fcf1;
+} 
+.download-btn-cn{
+  position: fixed;
+  bottom: 50px;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+}
+.download-btn-cn a{
+  background: none;
+  padding: 13px 22px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 2px solid #fff;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+.download-btn-cn a:active{
+    transform: scale(0.97);
+    color: #0b0c10;
+    background: #66fcf1;
+    border: none;
+}
+
+@media (max-width: 745px) {
+    .wrapper{
+      padding: 20px;
+    }
+    .content-box .nav{
+      padding: 20px 0;
+    }
+    .content-box .paragraphs-text{
+      max-height: 25vh;
+    }
+    .paragraphs-text p{
+      font-size: 19px;
+      text-align: left;
+    }
+    .nav button{
+      width: 100%;
+      font-size: 15px;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+    .nav .details{
+      width: 100%;
+    }
+    .details li:not(:first-child){
+      border-left: 0;
+      padding: 0;
+    }
+    .details li p, 
+    .details li span{
+      font-size: 17px;
+    }
+  }
+  @media (max-width: 500px) {
+    .wrapper .content-box{
+      padding: 10px 15px 0;
+    }
+    .paragraphs-text p{
+      font-size: 18px;
+    }
+    .details li{
+      margin-bottom: 10px;
+    }
+    .nav button{
+      margin-top: 10px;
+    }
+    .download-btn-cn a{
+      font-size: 13px;
+      padding: 9px 15px;
+    }
+  }
+  @media (max-width: 300px) {
+    .head{
+      bottom: 85vh;
+      font-size: 36px;
+    }
+  }
