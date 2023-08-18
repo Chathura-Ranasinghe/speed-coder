@@ -1,7 +1,7 @@
 # Speed Coder V.1
 
 Typing speed game.
-URL : [Speed Coder V.1](https://chatdil0.github.io/speed-coder/index.html)
+URL : [Speed Coder V.1](https://chathura-ranasinghe.github.io/speed-coder/index.html)
 
 *Hey this is my first web application game I created.*
 ---
